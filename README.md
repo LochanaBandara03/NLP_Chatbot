@@ -20,8 +20,8 @@ The chatbot allows customers to type a shopping list in natural language and ins
 
 1. **Clone Repository**
    ```bash
-   git clone https://github.com/your-username/supermarket-chatbot.git
-   cd supermarket-chatbot
+   git clone https://github.com/LochanaBandara03/NLP_Chatbot.git
+   cd NLP_Chatbot
    ```
 
 2. **Create Virtual Environment (Not must)**
