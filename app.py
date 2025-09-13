@@ -95,12 +95,12 @@ if user_input:
         else:
             st.write('### Here\'s where you can find your items:')
             
-        # Display items in the app
+        #Display items in the app
         for product, shelf in results["products"].items():
             st.write(f'{product:10} → {shelf}')
         
-        # Generate and offer direct download
-        # Create CSV content
+        #List generation
+        #Create CSV content
         csv_content = io.StringIO()
         writer = csv.writer(csv_content)
         writer.writerow(['Shopping List', f'Generated on {datetime.now().strftime("%Y-%m-%d %H:%M")}'])
@@ -109,9 +109,9 @@ if user_input:
         for product, shelf in results["products"].items():
             writer.writerow([product.title(), shelf])
         
-        # Create download button
+        #Create download button
         st.download_button(
-            label="📄 Download Shopping List",
+            label=" Download Shopping List",
             data=csv_content.getvalue(),
             file_name=f'shopping_list_{datetime.now().strftime("%Y%m%d_%H%M")}.csv',
             mime='text/csv',
