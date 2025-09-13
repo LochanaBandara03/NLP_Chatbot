@@ -50,7 +50,7 @@ supermarket-chatbot/
 └── user_guide.pdf         
 ```
 
-## ▶️ Usage
+##  Usage
 
 Run the Streamlit app:
 
@@ -75,7 +75,7 @@ streamlit run app.py
 }
 ```
 
-## 📖 How It Works
+##  How It Works
 
 ### User Input
 Customer enters a shopping list in the Streamlit text input box.
