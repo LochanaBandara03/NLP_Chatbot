@@ -4,9 +4,9 @@ This is a web-based chatbot for a supermarket environment using Natural Language
 
 The chatbot allows customers to type a shopping list in natural language and instantly returns the shelf numbers where each item can be found.
 
-- **Input:** Free-text shopping list (e.g., “I want apples, milk, and detergent”).
-- **Processing:** The chatbot uses spaCy NLP techniques (tokenization, POS tagging, Named Entity Recognition) to identify goods.
-- **Output:** A web interface (Streamlit app) displays the shelf list mapping.
+1. **Input:** Free-text shopping list (e.g., “I want apples, milk, and detergent”).
+2. **Processing:** The chatbot uses spaCy NLP techniques (tokenization, POS tagging, Named Entity Recognition) to identify goods.
+3. **Output:** A web interface (Streamlit app) displays the shelf list mapping.
 
 ## Features
 
@@ -39,17 +39,15 @@ The chatbot allows customers to type a shopping list in natural language and ins
    python -m spacy download en_core_web_sm
    ```
 
-   > **Important Note:** The spaCy language model is required for the chatbot to work. If you get an error about missing 'en_core_web_sm', make sure to run the second command above.
-
-## 📂 Project Structure
+## Project Structure
 
 ```
 supermarket-chatbot/
-├── app.py                 # Streamlit web app
-├── database.json          # Product-to-shelf mapping
-├── requirements.txt       # Python dependencies
-├── README.md              # Setup and usage guide
-└── user_guide.pdf         # User guide with examples
+├── app.py                 
+├── database.json          
+├── requirements.txt       
+├── README.md              
+└── user_guide.pdf         
 ```
 
 ## ▶️ Usage
@@ -60,9 +58,7 @@ Run the Streamlit app:
 streamlit run app.py
 ```
 
-Open your browser at http://localhost:8501 to interact with the chatbot.
-
-## 🗄️ Database Example (database.json)
+## Database Example (database.json)
 
 ```json
 {
@@ -93,7 +89,7 @@ Matches goods with database.json.
 ### Output
 Displays a formatted list of items with their shelf numbers in the Streamlit web app.
 
-## 🧪 Example
+## Example
 
 **Input (via web app):**
 ```
@@ -108,7 +104,7 @@ rice    → Shelf 4
 chicken → Shelf 7
 ```
 
-## 📦 Requirements
+## Requirements
 
 - Python 3.8+
 - spaCy
@@ -120,9 +116,3 @@ Install with:
 ```bash
 pip install spacy streamlit
 ```
-
-## 🚀 Future Improvements
-
-- Add voice input/output.
-- Expand product database dynamically.
-- Deploy app on Streamlit Cloud / Heroku for public use.
