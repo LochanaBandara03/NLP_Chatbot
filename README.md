@@ -1,56 +1,60 @@
-# Supermarket Assistant Chatbot
+# Supermarket Assistant Chatbot 🛒🤖
 
-This is a web-based chatbot for a supermarket environment using Natural Language Processing (NLP) with spaCy and Streamlit.
+## 📌 Overview
+
+This project implements an intelligent web-based chatbot for a supermarket environment using Natural Language Processing (NLP) with spaCy and Streamlit.
 
 The chatbot allows customers to type a shopping list in natural language and instantly returns the shelf numbers where each item can be found.
 
-1. **Input:** Free-text shopping list (e.g., “I want apples, milk, and detergent”).
-2. **Processing:** The chatbot uses spaCy NLP techniques (tokenization, POS tagging, Named Entity Recognition) to identify goods.
-3. **Output:** A web interface (Streamlit app) displays the shelf list mapping.
+- **Input:** Free-text shopping list (e.g., “I want apples, milk, and detergent”).
+- **Processing:** The chatbot uses spaCy NLP techniques (tokenization, POS tagging, Named Entity Recognition) to identify goods.
+- **Output:** A web interface (Streamlit app) displays the shelf list mapping.
 
-## Features
+## ⚙️ Features
 
-1. Web-based chatbot built with Streamlit.
-2. Extracts goods using spaCy NLP pipeline.
-3. Maps items to shelf numbers from a JSON product database.
-4. Displays clean interactive results in the browser.
-5. Handles at least 10+ goods with predefined shelf numbers.
+- Web-based chatbot built with Streamlit.
+- Extracts goods using spaCy NLP pipeline.
+- Maps items to shelf numbers from a JSON product database.
+- Displays clean interactive results in the browser.
+- Handles at least 10+ goods with predefined shelf numbers.
 
-## Installation
+## 🛠️ Installation
 
 1. **Clone Repository**
    ```bash
-   git clone https://github.com/LochanaBandara03/NLP_Chatbot.git
-   cd NLP_Chatbot
+   git clone https://github.com/your-username/supermarket-chatbot.git
+   cd supermarket-chatbot
    ```
 
-2. **Create Virtual Environment (Not must)**
+2. **Create Virtual Environment (Optional but Recommended)**
    ```bash
    python -m venv venv
-   venv\Scripts\activate    # For the windows users
+   source venv/bin/activate   # macOS/Linux
+   venv\Scripts\activate      # Windows
    ```
 
-3. **Install Dependencies and Language Model**
+3. **Install Dependencies**
    ```bash
-   # Install all required packages
    pip install -r requirements.txt
+   ```
 
-   # Install spacy language model
+4. **Download spaCy Language Model**
+   ```bash
    python -m spacy download en_core_web_sm
    ```
 
-## Project Structure
+## 📂 Project Structure
 
 ```
 supermarket-chatbot/
-├── app.py                 
-├── database.json          
-├── requirements.txt       
-├── README.md              
-└── user_guide.pdf         
+├── app.py                 # Streamlit web app
+├── database.json          # Product-to-shelf mapping
+├── requirements.txt       # Python dependencies
+├── README.md              # Setup and usage guide
+└── user_guide.pdf         # User guide with examples
 ```
 
-##  Usage
+## ▶️ Usage
 
 Run the Streamlit app:
 
@@ -58,7 +62,9 @@ Run the Streamlit app:
 streamlit run app.py
 ```
 
-## Database Example (database.json)
+Open your browser at http://localhost:8501 to interact with the chatbot.
+
+## 🗄️ Database Example (database.json)
 
 ```json
 {
@@ -75,7 +81,7 @@ streamlit run app.py
 }
 ```
 
-##  How It Works
+## 📖 How It Works
 
 ### User Input
 Customer enters a shopping list in the Streamlit text input box.
@@ -89,7 +95,7 @@ Matches goods with database.json.
 ### Output
 Displays a formatted list of items with their shelf numbers in the Streamlit web app.
 
-## Example
+## 🧪 Example
 
 **Input (via web app):**
 ```
@@ -104,7 +110,7 @@ rice    → Shelf 4
 chicken → Shelf 7
 ```
 
-## Requirements
+## 📦 Requirements
 
 - Python 3.8+
 - spaCy
@@ -116,3 +122,9 @@ Install with:
 ```bash
 pip install spacy streamlit
 ```
+
+## 🚀 Future Improvements
+
+- Add voice input/output.
+- Expand product database dynamically.
+- Deploy app on Streamlit Cloud / Heroku for public use.
